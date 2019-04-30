@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+#include <stdlib.h>
+
+#include <math.h>
+int main ()
+{
+
+    int n,i,count;
+    int res[]={};
+
+    n=0;i=0;count=0;
+
+    printf("Hexadecimal to Octal Number System");
+
+    printf("\n\n\aEnter Hexadecimal Number : ");
+
+    scanf("%X",&n);
+
+    while(n!=0)
+
+        {
+
+            res[i]=(n%8);
+
+            n=n/8;
+
+            i++;
+
+            count++;
+
+
+
+        }
+
+        printf("\n\aOctal Form is ");
+
+        for(i=count-1;i>=0;i--)
+
+            printf("%d",res[i]);
+
+}

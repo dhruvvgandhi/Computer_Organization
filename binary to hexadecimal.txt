@@ -1,0 +1,27 @@
+#include <stdio.h>
+ 
+int main()
+{
+    long int binaryval, hexadecimalval = 0, i = 1, remainder;
+ 
+    printf("Enter the binary number: ");
+    scanf("%ld", &binaryval);
+    while (binaryval != 0)
+    {
+        remainder = binaryval % 10;
+        hexadecimalval = hexadecimalval + remainder * i;
+        i = i * 2;
+        binaryval = binaryval / 10;
+    }
+    printf("Equivalent hexadecimal value: %lX", hexadecimalval);
+    return 0;
+}
+
+
+Program Explanation
+1. Take a binary number as input and store it in the variable binaryval.
+2. Obtain the remainder and quotient of the input number by dividing it by 10.
+3. Multiply the obtained remainder with variable i and increment the variable hexadecimalval with this value.
+4. Increment the variable i by 2 and override the variable binaryval with the quotient obtained.
+5. Repeat the steps 2-4 until the variable binaryval becomes zero.
+6. Print the variable hexadecimalval as output.

@@ -1,0 +1,25 @@
+ #include <stdio.h>
+ 
+int main()
+{
+    long int binarynum, octalnum = 0, j = 1, remainder;
+ 
+    printf("Enter the value for  binary number: ");
+    scanf("%ld", &binarynum);
+    while (binarynum != 0)
+    {
+        remainder = binarynum % 10;
+        octalnum = octalnum + remainder * j;
+        j = j * 2;
+        binarynum = binarynum / 10;
+    }
+    printf("Equivalent octal value: %lo", octalnum);
+    return 0;
+}
+
+1. Take a binary number as input and store it in the variable binarynum.
+2. Obtain the remainder and quotient of the input number by dividing it by 10.
+3. Multiply the obtained remainder with variable j and increment the variable octalnum with this value.
+4. Increment the variable j by 2 and override the variable binarynum with the quotient obtained.
+5. Repeat the steps 2-4 until the variable binarynum becomes zero.
+6. Print the variable octalnum as output.

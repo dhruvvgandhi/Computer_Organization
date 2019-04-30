@@ -1,0 +1,112 @@
+#include <stdio.h>
+
+#include <stdlib.h>
+
+#include <math.h>
+
+{
+    int n,i,count;
+
+    int res[65],t=0,rem;
+
+    n=0;i=0;count=0;
+
+    printf("Octal to Hexadecimal Number System");
+
+    printf("\n\n\aEnter Octal Number (0-7) : ");
+
+    start4:
+
+    scanf("%d",&n);
+
+    i=0;
+
+    count=0;
+
+    while(n!=0)
+
+        {
+
+            rem=n%10;
+
+            if(rem!=8&&rem!=9)
+
+            {
+
+                t=t+rem*pow(8,i);
+
+                n=n/10;
+
+                i++;
+
+            }
+
+            else
+
+            {
+
+                printf("\n\a\a\aWrong Input.Please enter again.\n");
+
+                goto start4;
+
+            }
+
+        }
+
+        i=0;
+
+        while(t!=0)
+
+        {
+
+            res[i]=(t%16);
+
+            t=t/16;
+
+            i++;
+
+            count++;
+
+
+
+        }
+
+        printf("\n\aHexadecimal Form is ");
+
+        for(i=count-1;i>=0;i--)
+
+        {
+
+            if(res[i]==10)
+
+                printf("A");
+
+            else if(res[i]==11)
+
+                printf("B");
+
+            else if(res[i]==12)
+
+                printf("C");
+
+            else if(res[i]==13)
+
+                printf("D");
+
+            else if(res[i]==14)
+
+                printf("E");
+
+            else if(res[i]==15)
+
+                printf("F");
+
+            else
+
+                printf("%d",res[i]);
+
+        }
+
+
+
+}

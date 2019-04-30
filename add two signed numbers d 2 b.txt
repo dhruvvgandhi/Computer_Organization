@@ -1,0 +1,30 @@
+4. Write a c program to add two signed numbers after converting
+them into binary numbers.
+#include <stdio.h>
+#include <math.h>
+long long convertDecimalToBinary(int n);
+int main(){
+    signed  int a,b,c;
+    printf("Enter a 1st decimal number: ");
+    scanf("%d", &a);
+    printf("%d in decimal = %d in binary", a, convertDecimalToBinary(a));
+    printf("\n Enter a 2nd decimal number: ");
+    scanf("%d", &b);
+    printf("%d in decimal = %d in binary", b, convertDecimalToBinary(b));
+    c=(a&b) ;
+    printf("\n AND  Output = %d",convertDecimalToBinary(c));
+    return 0;
+}
+long long convertDecimalToBinary(int n)
+{
+    long long binaryNumber = 0;
+    int remainder, i = 1, step = 1;
+    while (n!=0)
+    {
+        remainder = n%2;
+        n /= 2;
+        binaryNumber += remainder*i;
+        i *= 10;
+    }
+    return binaryNumber;
+}

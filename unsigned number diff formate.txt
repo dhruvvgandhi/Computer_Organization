@@ -1,0 +1,22 @@
+
+1. Write a c program to print a given unsigned number in
+different formats available with printf() function.
+
+#include <stdio.h>
+int main() {
+    unsigned int a = -1 ;//65353 range
+    int b = -1;
+    printf("%x\n", a); //Unsigned Hexadecimal for integer
+    printf("%x\n", b);
+    printf("%c\n", a); //Character format specifier
+    printf("%c\n", b);
+    printf("%f\n", a); //Double format specifier
+    printf("%e\n", b);
+    printf("%o\n", a); //Unsigned Octal number for integer
+    printf("%o\n", b);
+    printf("%d\n", a);//decimal integer
+    printf("%d\n", b); //Integer format specifier
+    printf("%u\n", a);
+    printf("%u\n", b); // conctrol string unsigned number
+    return 0;
+}
